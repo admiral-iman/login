@@ -28,7 +28,7 @@ _buildButton(context),
 }
 Widget _iconLogin() {
 return Image.asset(
-"assets/images/logo.png",
+"assets/images/kkk.jpg",
 height: 150.0,
 width: 150.0,
 );
@@ -50,7 +50,7 @@ Padding(
 padding: EdgeInsets.only(top: 12.0),
 ),
 Text(
-"Lorem Ipsum sim amet , lorem ipsum amet",
+"anjay login",
 style: TextStyle(
 fontSize: 12.0,
 color: Colors.white,
@@ -116,6 +116,24 @@ autofocus: false,
 );
 }
 Widget _buildButton(BuildContext) {
+    return Container(
+      margin: EdgeInsets.only(top: 5.0),
+      width: 250.0,
+      height: 50.0,
+      child: RaisedButton(
+          color: Colors.deepPurpleAccent,
+          elevation: 6.0,
+          child: Text(
+            "Book Your Flight",
+            style: TextStyle(
+                color: Colors.white,
+                fontSize: 20.0,
+                fontFamily: 'Roboto',
+                fontWeight: FontWeight.w700),
+          ),
+          onPressed: () => Simple()
+          ),
+    );
 return Column(
 children: <Widget>[
 Padding(
@@ -149,4 +167,22 @@ fontSize: 12.0,
 
 ],
 );
+}
+class Simple extends StatelessWidget {
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            appBar: AppBar(
+                title: Text('Simple Page'),
+            ),
+            body: Center(
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                        Text('Simple Page. Please press back button')
+                    ],
+                ),
+            ),
+        );
+    }
 }
